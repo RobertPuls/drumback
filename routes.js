@@ -19,7 +19,7 @@ function sleep(ms) {
 }
 
 async function test() {
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr[0].length; i++) {
     if (arr[0][i] == 1) {
       motor.servoWrite(pulseWidth);
       await sleep(100);
