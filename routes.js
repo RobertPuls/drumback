@@ -5,7 +5,7 @@ var router = express.Router();
 var motor = new Gpio(4, {
   mode: Gpio.OUTPUT
 });
-var motor1 = new Gpio(3, {
+var motor1 = new Gpio(2, {
   mode: Gpio.OUTPUT
 });
 // var arr = [
