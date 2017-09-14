@@ -24,29 +24,29 @@ async function alternate(arr) {
     if (arr[0][i] == 1) {
       motor.servoWrite(pulseWidth);
       console.log("right");
-      await sleep(80);
+      await sleep(75);
       pulseWidth = 1000;
 
       motor.servoWrite(pulseWidth);
       console.log("left");
-      // await sleep(80);
+      await sleep(75);
       pulseWidth = 500;
     } else {
-      await sleep(80);
+      await sleep(150);
     }
 
     if (arr[1][i] == 1) {
       motor1.servoWrite(pulseWidth);
       console.log("right");
-      await sleep(80);
+      await sleep(75);
       pulseWidth = 1000;
 
       motor1.servoWrite(pulseWidth);
       console.log("left");
-      // await sleep(80);
+      await sleep(75);
       pulseWidth = 500;
     } else {
-      await sleep(80);
+      await sleep(150);
     }
 
   }
