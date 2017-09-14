@@ -23,26 +23,26 @@ async function alternate(arr) {
     console.log("arr", arr[0][i]);
     if (arr[0][i] == 1) {
       motor.servoWrite(pulseWidth);
-      await sleep(100);
+      await sleep(75);
       pulseWidth = 1000;
 
       motor.servoWrite(pulseWidth);
-      await sleep(100);
+      // await sleep(100);
       pulseWidth = 500;
     } else {
-      await sleep(200);
+      await sleep(75);
     }
 
     if (arr[1][i] == 1) {
       motor1.servoWrite(pulseWidth);
-      await sleep(100);
+      await sleep(75);
       pulseWidth = 1000;
 
       motor1.servoWrite(pulseWidth);
-      await sleep(100);
+      // await sleep(100);
       pulseWidth = 500;
     } else {
-      await sleep(200);
+      await sleep(75);
     }
 
   }
@@ -60,11 +60,11 @@ async function right() {
 
 async function left() {
   motor1.servoWrite(pulseWidth);
-  await sleep(50);
+  await sleep(75);
   pulseWidth = 1000;
 
   motor1.servoWrite(pulseWidth);
-  await sleep(50);
+  await sleep(75);
   pulseWidth = 500;
 }
 
