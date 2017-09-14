@@ -13,16 +13,18 @@ function sleep(ms) {
 }
 
 async function test() {
-  if (arr[i] == 1) {
-    motor.servoWrite(pulseWidth);
-    await sleep(100);
-    pulseWidth = 1000;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 1) {
+      motor.servoWrite(pulseWidth);
+      await sleep(100);
+      pulseWidth = 1000;
 
-    motor.servoWrite(pulseWidth);
-    await sleep(100);
-    pulseWidth = 500;
-  } else {
-    await sleep(200);
+      motor.servoWrite(pulseWidth);
+      await sleep(100);
+      pulseWidth = 500;
+    } else {
+      await sleep(200);
+    }
   }
 }
 
