@@ -33,11 +33,11 @@ async function test() {
     }
 
     if (arr[1][i] == 1) {
-      motor.servoWrite(pulseWidth);
+      motor1.servoWrite(pulseWidth);
       await sleep(100);
       pulseWidth = 1000;
 
-      motor.servoWrite(pulseWidth);
+      motor1.servoWrite(pulseWidth);
       await sleep(100);
       pulseWidth = 500;
     } else {
