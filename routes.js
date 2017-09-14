@@ -27,10 +27,10 @@ async function alternate(arr) {
       pulseWidth = 1000;
 
       motor.servoWrite(pulseWidth);
-      // await sleep(100);
+      await sleep(75);
       pulseWidth = 500;
     } else {
-      await sleep(75);
+      await sleep(150);
     }
 
     if (arr[1][i] == 1) {
@@ -39,10 +39,10 @@ async function alternate(arr) {
       pulseWidth = 1000;
 
       motor1.servoWrite(pulseWidth);
-      // await sleep(100);
+      await sleep(75);
       pulseWidth = 500;
     } else {
-      await sleep(75);
+      await sleep(150);
     }
 
   }
