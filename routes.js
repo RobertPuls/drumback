@@ -50,21 +50,21 @@ async function alternate(arr) {
 
 async function right() {
   motor.servoWrite(pulseWidth);
-  await sleep(100);
+  await sleep(20);
   pulseWidth = 1000;
 
   motor.servoWrite(pulseWidth);
-  await sleep(100);
+  await sleep(20);
   pulseWidth = 500;
 }
 
 async function left() {
   motor1.servoWrite(pulseWidth);
-  await sleep(100);
+  await sleep(50);
   pulseWidth = 1000;
 
   motor1.servoWrite(pulseWidth);
-  await sleep(100);
+  await sleep(50);
   pulseWidth = 500;
 }
 
