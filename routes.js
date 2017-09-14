@@ -1,3 +1,4 @@
+
 var express = require('express');
 var Gpio = require('pigpio').Gpio;
 var router = express.Router();
@@ -20,6 +21,7 @@ function sleep(ms) {
 
 async function test(arr) {
   for (let i = 0; i < arr[0].length; i++) {
+    console.log("arr", arr[0][i]);
     if (arr[0][i] == 1) {
       motor.servoWrite(pulseWidth);
       await sleep(100);
@@ -48,8 +50,10 @@ async function test(arr) {
 }
 
 router.post('/', function(req, res, next) {
-  console.log("HEY LISTEN")
-  test(req.body.pattern);
+console.log(req.body.pattern);
+  test(req.body.pattern).then(() => {
+    res.json({"message" : "did it"});
+});
 });
 
 module.exports = router;
