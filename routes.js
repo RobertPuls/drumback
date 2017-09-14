@@ -9,8 +9,8 @@ var motor1 = new Gpio(3, {
   mode: Gpio.OUTPUT
 });
 var arr = [
-  [1, 1, 1, 0],
-  [0, 1, 0, 1]
+  [1, 1, 1, 0, 1, 1, 1, 0],
+  [0, 1, 0, 1, 0, 1, 0, 1]
 ];
 var pulseWidth = 500;
 
