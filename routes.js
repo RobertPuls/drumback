@@ -21,7 +21,8 @@ async function alternate(arr) {
       i = 0;
     }
 
-    console.log(play);
+    console.log("i", i);
+    console.log("play", play);
     console.log("arr", arr[0][i]);
     if (arr[0][i] == 1) {
       motor.servoWrite(pulseWidth);
