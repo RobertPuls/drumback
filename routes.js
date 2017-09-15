@@ -9,12 +9,13 @@ var motor1 = new Gpio(2, {
   mode: Gpio.OUTPUT
 });
 var pulseWidth = 500;
+var play = true
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function alternate(arr, play) {
+async function alternate(arr) {
   for (let i = 0; play === true; i++) {
     if (i == arr[0].length) {
       i = 0;
@@ -79,11 +80,9 @@ router.post('/', function(req, res, next) {
 });
 
 router.post('/stop', function(req, res, next) {
-  console.log(req.body.pattern);
-  alternate(req.body.pattern, false).then(() => {
-    res.json({
-      "message": "did it"
-    });
+  play = false;
+  res.json({
+    "message": "did it"
   });
 });
 
