@@ -17,7 +17,7 @@ function sleep(ms) {
 
 async function alternate(arr) {
   for (let i = 0; play = true; i++) {
-    if (i == arr.length) {
+    if (i == arr[0].length) {
       i = 0;
     }
 
