@@ -16,8 +16,12 @@ function sleep(ms) {
 }
 
 async function alternate(arr) {
-  console.log(play);
   for (let i = 0; play = true; i++) {
+    if (i == arr.length) {
+      i = 0;
+    }
+
+    console.log(play);
     console.log("arr", arr[0][i]);
     if (arr[0][i] == 1) {
       motor.servoWrite(pulseWidth);
@@ -42,7 +46,6 @@ async function alternate(arr) {
     } else {
       await sleep(150);
     }
-
   }
 }
 
