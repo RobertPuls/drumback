@@ -81,6 +81,7 @@ router.post('/', function(req, res, next) {
 
 router.post('/stop', function(req, res, next) {
   play = false;
+  console.log(play);
   res.json({
     "message": "did it"
   });
