@@ -16,6 +16,7 @@ function sleep(ms) {
 }
 
 async function alternate(arr) {
+  console.log(play);
   for (let i = 0; play = true; i++) {
     console.log("arr", arr[0][i]);
     if (arr[0][i] == 1) {
