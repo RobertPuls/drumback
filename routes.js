@@ -72,6 +72,7 @@ async function left() {
 
 router.post('/', function(req, res, next) {
   console.log(req.body.pattern);
+  play = true;
   alternate(req.body.pattern, true).then(() => {
     res.json({
       "message": "did it"
