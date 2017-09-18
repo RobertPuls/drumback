@@ -1,7 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 const cors = require('cors');
-const routes = require("./routes");
+const routes = require("./routes/routes");
+const beats = require("./routes/beats");
+
+
 
 var app = express();
 
@@ -13,6 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 
 app.use("/", routes);
+app.use("/beats", beats);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
